@@ -69,5 +69,7 @@ components:
             type: apiKey
             in: header
             name: x-telegram-init-data
-security:
-    - InitData: []
+
+#we want use security locally for every path, because some call not need auth or need another auth type
+#security:
+#    - InitData: []
