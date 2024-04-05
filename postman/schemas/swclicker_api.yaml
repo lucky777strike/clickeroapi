@@ -27,6 +27,12 @@ paths:
                         application/json:
                             schema:
                                 $ref: "click.yaml#/components/schemas/ClickActionResponse"
+                "429":
+                    description: Successful operation, but energy == 0 or energy < count. Use available energy for sended count(energy==10, count==9, clicks=9*x).
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "click.yaml#/components/schemas/ClickActionResponse"
                 "400":
                     description: Bad Request.
                     content:
