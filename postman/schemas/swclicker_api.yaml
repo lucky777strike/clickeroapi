@@ -40,6 +40,12 @@ paths:
                                 oneOf:
                                     - $ref: "click.yaml#/components/schemas/InvalidHashResponse"
                                     - $ref: "click.yaml#/components/schemas/InvalidCountResponse"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "Models.yaml#/components/schemas/Unauthorized"
 security:
     - ApiKeyAuth: []
 components:

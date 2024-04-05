@@ -1,0 +1,10 @@
+components:
+  schemas:
+    Unauthorized:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A specific message indicating bad telegram initData.
+      example:
+        error: "Invalid initData."

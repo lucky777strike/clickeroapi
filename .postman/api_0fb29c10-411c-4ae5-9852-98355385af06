@@ -16,6 +16,7 @@ files[] = {"id":"24681822-74ef2439-d5c7-45ae-824a-c30943f51de9","path":"SWClicke
 [config.relations.apiDefinition]
 rootDirectory = postman/schemas
 files[] = {"path":"click.yaml","metaData":{}}
+files[] = {"path":"Models.yaml","metaData":{}}
 files[] = {"path":"swclicker_api.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
