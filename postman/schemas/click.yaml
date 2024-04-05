@@ -1,0 +1,56 @@
+components:
+  schemas:
+    ClickActionRequest:
+      type: object
+      properties:
+        count:
+          type: integer
+          description: Number of clicks to apply.
+        hash:
+          type: string
+          description: A unique hash representing the click action.
+      required:
+        - count
+        - hash
+      example:
+        count: 15
+        hash: "e7dc5bc4dea0c61b3323944b3be6313123998a8ccb40cf4ebe599fada0426996"
+    ClickActionResponse:
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int64
+          description: The points added after click.
+        currentEnergy:
+          type: number
+          format: float
+          description: The current energy level after applying the click.
+        lastClickSeconds:
+          type: integer
+          format: int64
+          description: The Unix timestamp of the last click action.
+        Unique:
+          type: string
+          description: Some unique secret data to generate security hash
+      example:
+        count: 1885004
+        currentEnergy: 1066.9298
+        lastClickSeconds: 1712316701
+        Unique: someData123
+    InvalidHashResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A specific message indicating an invalid hash was provided.
+      example:
+        error: "Invalid hash provided."
+    InvalidCountResponse:
+      type: object
+      properties:
+        error:
+          type: string
+          description: A specific message indicating an invalid count was provided.
+      example:
+        error: "Invalid count provided."

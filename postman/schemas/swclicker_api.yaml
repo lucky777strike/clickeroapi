@@ -1,0 +1,50 @@
+openapi: 3.0.0
+info:
+    title: SWClicker API
+    version: 1.0.0
+    description: API for clicker game.
+servers:
+    - url: 127.0.0.1:8080/api
+paths:
+    /click/apply:
+        post:
+            summary: Apply a click action.
+            description: Sends a click action to the server and returns the current count, energy, and time since the last click.
+            tags:
+                - Clicks
+            parameters:
+                - in: header
+                  name: x-telegram-init-data
+                  schema:
+                      type: string
+                  required: true
+                  description: User and authentication data passed in header
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "click.yaml#/components/schemas/ClickActionRequest"
+            responses:
+                "200":
+                    description: Successful operation.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "click.yaml#/components/schemas/ClickActionResponse"
+                "400":
+                    description: Bad Request.
+                    content:
+                        application/json:
+                            schema:
+                                oneOf:
+                                    - $ref: "click.yaml#/components/schemas/InvalidHashResponse"
+                                    - $ref: "click.yaml#/components/schemas/InvalidCountResponse"
+security:
+    - ApiKeyAuth: []
+components:
+    securitySchemes:
+        ApiKeyAuth:
+            type: apiKey
+            in: header
+            name: x-telegram-init-data

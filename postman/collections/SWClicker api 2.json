@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "74ef2439-d5c7-45ae-824a-c30943f51de9",
+		"name": "SWClicker api 2",
+		"description": "API for clicker game.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "24681822-74ef2439-d5c7-45ae-824a-c30943f51de9"
+	},
+	"item": [
+		{
+			"name": "click",
+			"item": [
+				{
+					"name": "apply",
+					"item": [
+						{
+							"name": "Apply a click action.",
+							"id": "20d50850-dde3-43db-9097-6c04dbd3fdd9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "(Required) User and authentication data passed in header",
+										"key": "x-telegram-init-data",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"count\": \"<integer>\",\n  \"hash\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/click/apply",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"click",
+										"apply"
+									]
+								},
+								"description": "Sends a click action to the server and returns the current count, energy, and time since the last click."
+							},
+							"response": [
+								{
+									"id": "68e9351f-a11a-4ac1-92d5-07089f8b92f9",
+									"name": "Successful operation.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) User and authentication data passed in header",
+												"key": "x-telegram-init-data",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"count\": \"<integer>\",\n  \"hash\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/click/apply",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"click",
+												"apply"
+											]
+										},
+										"description": "Sends a click action to the server and returns the current count, energy, and time since the last click."
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"count\": \"<long>\",\n  \"currentEnergy\": \"<float>\",\n  \"lastClickSeconds\": \"<long>\",\n  \"Unique\": \"<string>\"\n}"
+								},
+								{
+									"id": "e42ecd3f-fb20-43c1-8cfb-63c20d05bd7c",
+									"name": "Bad Request.",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "(Required) User and authentication data passed in header",
+												"key": "x-telegram-init-data",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"count\": \"<integer>\",\n  \"hash\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/click/apply",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"click",
+												"apply"
+											]
+										},
+										"description": "Sends a click action to the server and returns the current count, energy, and time since the last click."
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"error\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "3295a416-ad34-4c37-b51c-ac6d0845f43f"
+				}
+			],
+			"id": "b339d3c6-65e4-4838-aebd-fbf1a9ea1540"
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "x-telegram-init-data",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "209eb2c9-dd2a-472a-9a70-2211ed207868",
+			"key": "baseUrl",
+			"value": "127.0.0.1:8080/api"
+		}
+	]
+}
