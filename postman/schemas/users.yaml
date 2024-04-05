@@ -31,6 +31,6 @@ components:
                 energy: 1027.8799
                 energyLimit: 1200.0
                 energyPerSecond: 1.2 # Assumed value for demonstration
-                amount: "34247237472347" # Assumed value for demonstration
+                amount: "342472374723455555557" # Assumed value for demonstration
                 banned: false
                 lastClickSeconds: 1712316683
