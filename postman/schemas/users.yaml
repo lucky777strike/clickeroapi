@@ -22,8 +22,6 @@ components:
                     type: string
                 banned:
                     type: boolean
-                researchPoints:
-                    type: integer
                 lastClickSeconds:
                     type: integer
             example: # Example response data matching the schema
@@ -33,7 +31,6 @@ components:
                 energy: 1027.8799
                 energyLimit: 1200.0
                 energyPerSecond: 1.2 # Assumed value for demonstration
-                amount: "500" # Assumed value for demonstration
-                banned: true
-                researchPoints: 10
+                amount: "34247237472347" # Assumed value for demonstration
+                banned: false
                 lastClickSeconds: 1712316683

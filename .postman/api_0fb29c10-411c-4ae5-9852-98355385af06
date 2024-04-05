@@ -9,7 +9,7 @@ id = 0fb29c10-411c-4ae5-9852-98355385af06
 
 [config.relations.collections]
 rootDirectory = postman/collections
-files[] = {"id":"24681822-74ef2439-d5c7-45ae-824a-c30943f51de9","path":"SWClicker api 2.json","metaData":{"generateCollectionPreferences":"{\"updateCollectionSync\":true,\"folderStrategy\":\"Paths\",\"includeDeprecated\":true,\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"requestParametersResolution\":\"Example\",\"exampleParametersResolution\":\"Example\",\"collapseFolders\":true,\"optimizeConversion\":true}"}}
+files[] = {"id":"24681822-eee67f7f-bc2b-44a2-8189-24ed4d132af6","path":"swclicker api.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Schema\",\"folderStrategy\":\"Paths\",\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"alwaysInheritAuthentication\":false,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Schema\",\"exampleParametersResolution\":\"Schema\"}"}}
 
 [config.relations.collections.metaData]
 
