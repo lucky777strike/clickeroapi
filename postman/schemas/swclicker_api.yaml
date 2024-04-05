@@ -46,11 +46,38 @@ paths:
                         application/json:
                             schema:
                                 $ref: "Models.yaml#/components/schemas/Unauthorized"
-security:
-    - ApiKeyAuth: []
+    /users/me:
+        get:
+            summary: Get user information
+            operationId: getUserInfo
+            tags:
+                - User
+            parameters:
+                - in: header
+                  name: x-telegram-init-data
+                  schema:
+                      type: string
+                  required: true
+                  description: User and authentication data passed in header.
+            responses:
+                "200":
+                    description: Successful operation.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "users.yaml#/components/schemas/UsersMeResponse"
+                "401":
+                    description: Unauthorized
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "Models.yaml#/components/schemas/Unauthorized"                  
+
 components:
     securitySchemes:
         ApiKeyAuth:
             type: apiKey
             in: header
             name: x-telegram-init-data
+security:
+    - ApiKeyAuth: []

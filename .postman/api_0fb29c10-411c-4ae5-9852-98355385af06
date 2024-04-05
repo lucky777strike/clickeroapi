@@ -18,6 +18,7 @@ rootDirectory = postman/schemas
 files[] = {"path":"click.yaml","metaData":{}}
 files[] = {"path":"Models.yaml","metaData":{}}
 files[] = {"path":"swclicker_api.yaml","metaData":{}}
+files[] = {"path":"users.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3
