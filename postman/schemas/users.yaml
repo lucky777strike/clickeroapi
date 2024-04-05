@@ -23,7 +23,7 @@ components:
                 banned:
                     type: boolean
                 lastClickSeconds:
-                    type: integer
+                    type: int64
             example: # Example response data matching the schema
                 id: 158287363
                 username: "lucky767strike"
