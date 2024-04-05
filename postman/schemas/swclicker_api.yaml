@@ -10,15 +10,10 @@ paths:
         post:
             summary: Apply a click action.
             description: Sends a click action to the server and returns the current count, energy, and time since the last click.
+            security:
+                - InitData: [ ]
             tags:
                 - Clicks
-            parameters:
-                - in: header
-                  name: x-telegram-init-data
-                  schema:
-                      type: string
-                  required: true
-                  description: User and authentication data passed in header
             requestBody:
                 required: true
                 content:
@@ -50,15 +45,10 @@ paths:
         get:
             summary: Get user information
             operationId: getUserInfo
+            security:
+                - InitData: [ ]
             tags:
                 - User
-            parameters:
-                - in: header
-                  name: x-telegram-init-data
-                  schema:
-                      type: string
-                  required: true
-                  description: User and authentication data passed in header.
             responses:
                 "200":
                     description: Successful operation.
@@ -75,9 +65,9 @@ paths:
 
 components:
     securitySchemes:
-        ApiKeyAuth:
+        InitData:
             type: apiKey
             in: header
             name: x-telegram-init-data
 security:
-    - ApiKeyAuth: []
+    - InitData: []
